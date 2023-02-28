@@ -9,21 +9,54 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <h1>Calculadora Basica</h1>
+    <center><h1>Calculadora Basica</h1></center>
    <center> <form>
 
         <input type="text" id="N1">
         +
         <input type="text" id="N2">
-        <button type="button" onclick="Somar()">Somar</button><!--Acionar Evento  onclick="Nome do evento">-->
-        <input type="text" id="Resp" readonly> <!--Readonly ele não permiti digitar na caixa-->
+        <br>
+        <br>
+         <input type="text" id="Resp" readonly> <!--Readonly ele não permiti digitar na caixa-->
+        <br>
+        <br>
+        <button type="button" onclick="Somar()">Somar</button><!--Acionar Evento  onclick="Nome do evento">-->
+        <button type="button" onclick="Subtrair()">Subtrair</button><!--Acionar Evento  onclick="Nome do evento">-->
+<br>       
+        <button type="button" onclick="Dividir()">Divisão</button><!--Acionar Evento  onclick="Nome do evento">-->
+        <button type="button" onclick="Multiplicar()">Multiplicação</button><!--Acionar Evento  onclick="Nome do evento">-->
+        
     </form></center>
     <script>
         function Somar(){
          var N1, N2, Resp;
          N1 = parseFloat(document.getElementById("N1").value); 
-         N2 = parseFloat(document.getElementById("N1").value);
+         N2 = parseFloat(document.getElementById("N2").value);
          Resp = N1 + N2;
+
+         document.getElementById("Resp").value = Resp;
+        }
+        function Subtrair(){
+         var N1, N2, Resp;
+         N1 = parseFloat(document.getElementById("N1").value); 
+         N2 = parseFloat(document.getElementById("N2").value);
+         Resp = N1 - N2;
+
+         document.getElementById("Resp").value = Resp;
+        }
+        function Dividir(){
+         var N1, N2, Resp;
+         N1 = parseFloat(document.getElementById("N1").value); 
+         N2 = parseFloat(document.getElementById("N2").value);
+         Resp = N1 / N2;
+
+         document.getElementById("Resp").value = Resp;
+        }
+        function Multiplicar(){
+         var N1, N2, Resp;
+         N1 = parseFloat(document.getElementById("N1").value); 
+         N2 = parseFloat(document.getElementById("N2").value);
+         Resp = N1 * N2;
 
          document.getElementById("Resp").value = Resp;
         }

@@ -1,3 +1,16 @@
 body{
-    background-color: #6b5b95;
+    background-color: #a09fea;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button{
+    font-size: medium;
+    background-color:#e1daed;
+    border-color: #66427a;
+    border-bottom-width: 3.5px;
+
+}
+button:hover{
+    background-color: #e1daed;
+    color: #66427a;
 }
