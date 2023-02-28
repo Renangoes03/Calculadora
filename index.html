@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+   
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Basica</h1>
+   <center> <form>
+
+        <input type="text" id="N1">
+        +
+        <input type="text" id="N2">
+        <button type="button" onclick="Somar()">Somar</button><!--Acionar Evento  onclick="Nome do evento">-->
+        <input type="text" id="Resp" readonly> <!--Readonly ele não permiti digitar na caixa-->
+    </form></center>
+    <script>
+        function Somar(){
+         var N1, N2, Resp;
+         N1 = parseFloat(document.getElementById("N1").value); 
+         N2 = parseFloat(document.getElementById("N1").value);
+         Resp = N1 + N2;
+
+         document.getElementById("Resp").value = Resp;
+        }
+        
+    </script>
+</body>
+</html>
