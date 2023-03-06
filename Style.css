@@ -1,16 +1,52 @@
-body{
-    background-color: #a09fea;
+body {
+    background-image: url('./Img/error404.jpg');
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    --dark-mode-color: #000000;
+    --dark-mode-bg-color: #ffffff;
 }
-button{
-    font-size: medium;
-    background-color:#e1daed;
-    border-color: #66427a;
-    border-bottom-width: 3.5px;
 
-}
-button:hover{
+button {
+    font-size: medium;
     background-color: #e1daed;
+    border-color: #66427a;
+    border-bottom-width: 2px;
+    border: thick double #32a1ce;
+    border-width: 15px;
+    width: 125px;
+    margin-top: 6px;
+}
+
+button:hover {
+    background-color: #d3bff7;
     color: #66427a;
+}
+
+.containerCalculadora {
+    border-radius: 10px;
+    margin: 10px;
+    width: 650px;
+    background-color: #599aaf;
+    padding: 10px 16px 10px 16px;
+}
+
+.containerCalculadora h1 {
+    background: #748892;
+    margin-bottom: 20px;
+}
+
+.contentsInput input {
+    width: 150px;
+    padding-left: 5px;
+}
+
+#contents {
+    margin-bottom: 40px;
+}
+
+.BtnContents {
+    margin-bottom: 40px;
 }

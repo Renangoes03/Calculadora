@@ -1,66 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="Style.css">
-   
+
+
     <title>Calculadora</title>
 </head>
+
 <body>
-    <center><h1>Calculadora Basica</h1></center>
-   <center> <form>
+    <center>
+        <div class="containerCalculadora">
+            <h1>Calculadora Basica</h1>
 
-        <input type="text" id="N1">
-        +
-        <input type="text" id="N2">
-        <br>
-        <br>
-         <input type="text" id="Resp" readonly> <!--Readonly ele não permiti digitar na caixa-->
-        <br>
-        <br>
-        <button type="button" onclick="Somar()">Somar</button><!--Acionar Evento  onclick="Nome do evento">-->
-        <button type="button" onclick="Subtrair()">Subtrair</button><!--Acionar Evento  onclick="Nome do evento">-->
-<br>       
-        <button type="button" onclick="Dividir()">Divisão</button><!--Acionar Evento  onclick="Nome do evento">-->
-        <button type="button" onclick="Multiplicar()">Multiplicação</button><!--Acionar Evento  onclick="Nome do evento">-->
-        
-    </form></center>
+
+            <div class="contentsInput">
+                <input type="text" id="N1" placeholder="Valor 1"> +
+                <input type="text" id="N2" placeholder="Valor 2"> =
+                <input type="text" id="Resp" readonly placeholder="Resposta">
+            </div>
+            <div class="BtnContents">
+                <!--Readonly ele não permiti digitar na caixa-->
+                <br>
+                <button type="button" class="btn btn-primary" onclick="Somar()">Somar</button>
+                <!--Acionar Evento  onclick = "Nome do evento">-->
+                <button type="button" class="btn btn-danger" onclick="Subtrair()">Subtrair</button>
+                <!--Acionar Evento  onclick = "Nome do evento">-->
+                <br>
+                <button type="button" class="btn btn-success" onclick="Dividir()">Dividir</button>
+                <!--Acionar Evento  onclick = "Nome do evento">-->
+                <button type="button" class="btn btn-dark" onclick="Multiplicar()">Multiplicar</button>
+                <!--Acionar Evento  onclick = "Nome do evento">-->
+
+                <button type="button" class="btn btn-warning" onclick="Limpar()">Limpar</button>
+            </div>
+        </div>
+
+
+    </center>
     <script>
-        function Somar(){
-         var N1, N2, Resp;
-         N1 = parseFloat(document.getElementById("N1").value); 
-         N2 = parseFloat(document.getElementById("N2").value);
-         Resp = N1 + N2;
+        function Somar() {
+            var N1, N2, Resp;
+            N1 = parseFloat(document.getElementById("N1").value);
+            N2 = parseFloat(document.getElementById("N2").value);
+            Resp = N1 + N2;
 
-         document.getElementById("Resp").value = Resp;
+            document.getElementById("Resp").value = Resp;
         }
-        function Subtrair(){
-         var N1, N2, Resp;
-         N1 = parseFloat(document.getElementById("N1").value); 
-         N2 = parseFloat(document.getElementById("N2").value);
-         Resp = N1 - N2;
 
-         document.getElementById("Resp").value = Resp;
-        }
-        function Dividir(){
-         var N1, N2, Resp;
-         N1 = parseFloat(document.getElementById("N1").value); 
-         N2 = parseFloat(document.getElementById("N2").value);
-         Resp = N1 / N2;
+        function Subtrair() {
+            var N1, N2, Resp;
+            N1 = parseFloat(document.getElementById("N1").value);
+            N2 = parseFloat(document.getElementById("N2").value);
+            Resp = N1 - N2;
 
-         document.getElementById("Resp").value = Resp;
+            document.getElementById("Resp").value = Resp;
         }
-        function Multiplicar(){
-         var N1, N2, Resp;
-         N1 = parseFloat(document.getElementById("N1").value); 
-         N2 = parseFloat(document.getElementById("N2").value);
-         Resp = N1 * N2;
 
-         document.getElementById("Resp").value = Resp;
+        function Dividir() {
+            var N1, N2, Resp;
+            N1 = parseFloat(document.getElementById("N1").value);
+            N2 = parseFloat(document.getElementById("N2").value);
+            Resp = N1 / N2;
+
+            document.getElementById("Resp").value = Resp;
         }
-        
+
+        function Multiplicar() {
+            var N1, N2, Resp;
+            N1 = parseFloat(document.getElementById("N1").value);
+            N2 = parseFloat(document.getElementById("N2").value);
+            Resp = N1 * N2;
+
+            document.getElementById("Resp").value = Resp;
+        }
+
+        function Limpar() {
+            var N1, N2, Resp;
+            N1 = document.getElementById("N1").value = " ";
+            N2 = document.getElementById("N2").value = " ";
+            Resp = document.getElementById("Resp").value = " ";
+        }
     </script>
 </body>
+
 </html>
