@@ -1,12 +1,23 @@
 body {
-    background-image: url('./Img/error404.jpg');
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     --dark-mode-color: #000000;
     --dark-mode-bg-color: #ffffff;
+    --text-white: #ffffff;
+    --text-dark: #142136;
+    
+    /* cores de fundo */
+    --bg-grey-light: #f5f5f5;
+    --bg-white: #ffffff;
+    --bg-blue-dark: #142136;
+    --bg-indigo: #6366f1;
+    font-family: "Inter", sans-serif;
+    line-height: 1.7;
+    background-color: var(--bg-grey-light);
+    /*criando uma variável de css */
+    --bg-grey-light: #f5f5f5;
+    /*usando a variavel de css */
+    background-color: var(--bg-grey-light);
 }
 
 button {
@@ -26,16 +37,21 @@ button:hover {
 }
 
 .containerCalculadora {
+    /* border-radius:10 fica quadrado; border-radius: 100 redondo*/
     border-radius: 10px;
-    margin: 10px;
+    margin: 100px;
     width: 650px;
     background-color: #599aaf;
-    padding: 10px 16px 10px 16px;
+    padding: 10px 16px 100px 16px;
+    background-image: url('./Img/error404.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .containerCalculadora h1 {
-    background: #748892;
-    margin-bottom: 20px;
+    background: #748692;
+    margin-bottom: 30px;
 }
 
 .contentsInput input {
@@ -49,4 +65,35 @@ button:hover {
 
 .BtnContents {
     margin-bottom: 40px;
+}
+
+.dark {
+    --text-white: #e6e6e6;
+    --text-dark: #ffffff;
+    --bg-grey-light: #142136;
+    --bg-white: #22395d;
+    --bg-blue-dark: #142136;
+    --bg-indigo: #7577e1;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.button {
+    width: 200px;
+    padding: 5px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    cursor: pointer;
+    background-color: var(--bg-indigo);
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
 }
